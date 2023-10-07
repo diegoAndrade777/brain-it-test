@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="fullstack-test" title="BrainIt API - Teste Backend" src="src/docs/assets/wallpaper-brainit.png" width="800px" />
+    <img alt="backend-test" title="BrainIt API - Teste Backend" src="src/docs/assets/walpaper-brainit.png" width="800px" />
 </h1>
 <h1 align="center">BrainIt API - Backend Teste</h1>
 <p align="center">API desenvolvida no teste para vaga de desenvolvedor backend</p>
@@ -16,7 +16,7 @@
 
 ## Organização do projeto aplicado SOLID e package for feature
 <h1 align="center">
-    <img alt="project" title="project" src="src/docs/assets/project.png" width="300px" />
+    <img alt="project" title="project" src="src/docs/assets/project.png" width="200px" />
 </h1>
 
 ## Instalação
@@ -29,11 +29,16 @@ Subir a imagem do Postgres via Docker. Certifique-se que possui Docker instalado
 ```bash
 $ docker-compose up -d
 ```
-Copie as variáveis de ambiente no arquivo .env.example e crie um arquivo .env. Na variável DATABASE_URL o usuario e senha do usuário do Postgres é a padrão, caso mude, deve ser alterado. Esses campos estão depois do "postgresql://" respectivamente.
+Copie as variáveis de ambiente no arquivo .env.example e crie um arquivo .env. Informe as variáveis de ambiente referente a seu usuário no Postgres: POSTGRES_USER,
+POSTGRES_PASSWORD. Os valores informados são os padrões.
 ```bash
-$ DATABASE_URL=postgresql://postgres:postgres@localhost:5432/sejabest?schema=public
+$ POSTGRES_USER=postgres
+$ POSTGRES_PASSWORD=admin
+$ POSTGRES_DB=brain_it_test
+
+$ DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:5432/${POSTGRES_DB}?schema=public
 ```
-Certifique-se que a imagem "postgres" está rodando com o comando:
+Certifique-se que a imagem "postgres-brain-it" está rodando com o comando:
 ```bash
 $ docker ps -a
 ```
@@ -60,9 +65,9 @@ Para visualizar a documentação do Swagger, abra no navegador em: http://localh
     <img alt="swagger" title="swagger" src="src/docs/assets/swagger.png" width="800px" />
 </h1>
 
-Você pode acessar a documentação para testee no Postman também, bastar clicar no link.
+Você pode acessar a documentação para teste no Postman também, bastar clicar no link.
+<a href="https://www.postman.com/restless-space-645651/workspace/brain-it-test" target="_blank">Link para o Postman</a>
 <h1 align="center">
-    <a href="https://www.postman.com/restless-space-645651/workspace/brain-it-test" target="_blank">
     <img alt="postman" title="postman" src="src/docs/assets/postman.png" width="800px" />
 </h1>
 
