@@ -99,7 +99,7 @@ Você pode acessar a documentação para teste no Postman também, bastar clicar
     <img alt="postman" title="postman" src="src/docs/assets/postman.png" width="800px" />
 </h1>
 
-Ao testar, primeiro cadastrar um usuário no endpoint "/user", depois autenticar o mesmo no endpoint "/auth" informando o respectivo email e senha, para obter o token. Copiar o token de retorno para autorizar no Swagger (botão Authorize) e na variável de ambiente TEST_TOKEN no arquivo .env do projeto para executar os testes com o Jest.
+Ao testar, primeiro cadastrar um usuário no endpoint "/user", depois autenticar o mesmo no endpoint "/auth" informando o respectivo email e senha, para obter o token. Copiar o token de retorno para autorizar no Swagger (botão Authorize), na variável de ambiente {{authToken}} caso utilize o Postman e na variável de ambiente TEST_TOKEN no arquivo .env do projeto para executar os testes com o Jest.
 <h1 align="center">
     <img alt="auth" title="auth" src="src/docs/assets/auth.png" width="800px" />
 </h1>
