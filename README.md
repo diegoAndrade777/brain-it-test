@@ -34,6 +34,7 @@ A renovação acontece através de uma pré-configuração. Está configurado pa
 apropriados e mensagens de erro significativas.
 R: Eu implementei para caso de sucesso retorne os dados gravados (exceto delete) e o status 201. Para erros, o 401 que retornará um erro correspondente ao método em questão. Ex: 'Unexpected error at authenticate a user.'.
 Caso haja algum erro originado no banco de dados, como por exemplo tipo de dado enviado incorretamente ou campos obrigatórios não informados, o próprio ORM ultilizado que é o Prisma, retornará o erro específico no terminal oferecendo facilidade ao desenvolvedor para corrigir o problema. Esse log de erros, é configurado nas propriedades do PrismaClient(client do ORM Prisma) que se encontra no arquivo src/lib/prisma.ts.
+Por esse motivo, não utilizei uma lib de validação como o Zod por exemplo.
 
 3 - Liste pelo menos três bibliotecas Node.js que você consideraria úteis ao criar uma API
 RESTful com autenticação JWT e explique por que você escolheria cada uma delas.
