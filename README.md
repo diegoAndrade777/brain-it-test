@@ -21,6 +21,31 @@
     <img alt="project" title="project" src="src/docs/assets/project.png" width="200px" />
 </h1>
 
+## Questões do teste
+``bash
+1 - Implemente autenticação JWT na API que você criou. Os usuários devem se autenticar
+antes de poderem realizar operações nas tarefas. Explique como você lidaria com a
+geração, validação e renovação dos tokens JWT.
+R: Utilizei a biblioteca jsonwebtoken que gera um Bearer token por padrão do tipo HS256 ou RSA que é composto pelo header, payload e signature codificados. 
+A validação ocorre nas rotas no arquivo routes.ts, passando por parâmetro o middleware implementado: "isAuthenticated" que faz a verificação se o usuário possui o token de autenticação que é obtido na rota "auth". 
+A renovação acontece através de uma pré-configuração. Está configurado para o token expirar em 2h, podendo ser customizado para o tempo desejado. Atingindo este tempo configurado, ao tentar rodar alguma rota authenticada, aparecerá a mensagem: "jwt expired" obrigando o usuário a se autenticar novamente. 
+
+2 - Explique como você lidaria com erros na API, incluindo o uso de códigos de status HTTP
+apropriados e mensagens de erro significativas.
+R: Eu implementei para caso de sucesso retorne os dados gravados (exceto delete) e o status 201. Para erros, o 401 que retornará um erro correspondente ao método em questão. Ex: 'Unexpected error at authenticate a user.'.
+Caso haja algum erro originado no banco de dados, como por exemplo tipo de dado enviado incorretamente ou campos obrigatórios não informados, o próprio ORM ultilizado que é o Prisma, retornará o erro específico no terminal oferecendo facilidade ao desenvolvedor para corrigir o problema. Esse log de erros, é configurado nas propriedades do PrismaClient(client do ORM Prisma) que se encontra no arquivo src/lib/prisma.ts.
+
+3 - Liste pelo menos três bibliotecas Node.js que você consideraria úteis ao criar uma API
+RESTful com autenticação JWT e explique por que você escolheria cada uma delas.
+R: 
+* Prisma ORM - Justamente pela facilidade de implementação e praticidade em conectar a api em um banco de dados (relacional ou não). Pelo motivo da configuração e log de erros informado na resposta anterior. Documentação detalhada de fácil entendimento e muito conteúdo para tirar dúvidas.
+
+* Jsonwebtoken - Também pela facilidade de implementação, configuração e ultilização. Basta criar o middleware e utilizar nas rotas que deseja que estejam autenticadas. Documentação de fácil entendimento e muito conteúdo para tirar dúvidas por ser uma lib muito utilizada pela comunidade.
+
+* Swagger - É uma ótima ferramenta para documentação e teste de apis. É um pouco morosa, gastei um bom tempo fazendo a documentação. Mas sem dúvida, uma documentação é algo fundamental para que os desenvolvedores entendam e testem de forma acertiva a api.
+Em alternativa, eu utilizei o Postman por ser mais prático, rápido para documentar e testar a api. Disponibilizei o link público do workspace para ser utilizado também.
+```
+
 ## Instalação
 Para instalar as dependências, clone o projeto e rode:
 ```bash
