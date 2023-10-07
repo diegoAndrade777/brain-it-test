@@ -84,12 +84,3 @@ $ yarn test CreateUserUseCase.spec.ts
 ```
 
 Made with ♥ by Diego Andrade :wave: [Get in touch!](https://www.linkedin.com/in/diego-r-andrade/)
-
-<script>
-    var links = document.querySelectorAll( '.post-content a' );  
-    for (var i = 0, length = links.length; i < length; i++) {  
-        if (links[i].hostname != window.location.hostname) {
-            links[i].target = '_blank';
-        }
-    }
-</script>
