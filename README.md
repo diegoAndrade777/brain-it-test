@@ -1,7 +1,7 @@
 <h1 align="center">
-    <img alt="backend-test" title="BrainIt API - Teste Backend" src="src/docs/assets/walpaper-brainit.png" width="800px" />
+    <img alt="backend-test" title="Brain IT API - Teste Backend" src="src/docs/assets/walpaper-brainit.png" width="800px" />
 </h1>
-<h1 align="center">BrainIt API - Backend Teste</h1>
+<h1 align="center">Brain IT API - Backend Teste</h1>
 <p align="center">API desenvolvida no teste para vaga de desenvolvedor backend</p>
 
 ## Tecnologias
@@ -13,6 +13,8 @@
 - [JSONWebToken](https://www.npmjs.com/package/jsonwebtoken)
 - [Swagger](https://swagger.io/)
 - [Postman](https://www.postman.com/)
+- [Jest](https://jestjs.io/pt-BR/)
+- [Supertest](https://www.npmjs.com/package/supertest)
 
 ## Organização do projeto aplicado SOLID e package for feature
 <h1 align="center">
@@ -30,7 +32,7 @@ Subir a imagem do Postgres via Docker. Certifique-se que possui Docker instalado
 $ docker-compose up -d
 ```
 Copie as variáveis de ambiente no arquivo .env.example e crie um arquivo .env. Informe as variáveis de ambiente referente a seu usuário no Postgres: POSTGRES_USER,
-POSTGRES_PASSWORD. Os valores informados são os padrões.
+POSTGRES_PASSWORD. Os valores informados são os padrões, se necessário, modifique.
 ```bash
 $ POSTGRES_USER=postgres
 $ POSTGRES_PASSWORD=admin
@@ -40,7 +42,7 @@ $ DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:5432
 ```
 Certifique-se que a imagem "postgres-brain-it" está rodando com o comando:
 ```bash
-$ docker ps -a
+$ docker ps
 ```
 Crie a migration das tabelas com o Prisma rodando:
 ```bash
@@ -66,7 +68,7 @@ Para visualizar a documentação do Swagger, abra no navegador em: http://localh
 </h1>
 
 Você pode acessar a documentação para teste no Postman também, bastar clicar no link.
-<a href="https://www.postman.com/restless-space-645651/workspace/brain-it-test" target="_blank">Link para o Postman</a>
+<p>Link para o <a href="https://www.postman.com/restless-space-645651/workspace/brain-it-test" target="_blank">Postman</a></p>
 <h1 align="center">
     <img alt="postman" title="postman" src="src/docs/assets/postman.png" width="800px" />
 </h1>
