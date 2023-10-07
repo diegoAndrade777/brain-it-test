@@ -22,7 +22,7 @@
 </h1>
 
 ## Questões do teste
-``bash
+``` bash
 1 - Implemente autenticação JWT na API que você criou. Os usuários devem se autenticar
 antes de poderem realizar operações nas tarefas. Explique como você lidaria com a
 geração, validação e renovação dos tokens JWT.
