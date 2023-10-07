@@ -68,7 +68,7 @@ Para visualizar a documentação do Swagger, abra no navegador em: http://localh
 </h1>
 
 Você pode acessar a documentação para teste no Postman também, bastar clicar no link.
-[Postman](https://www.postman.com/restless-space-645651/workspace/brain-it-test "title" target="_blank")
+<a href="https://www.postman.com/restless-space-645651/workspace/brain-it-test" rel="nofollow" title="title&quot; target=&quot;_blank">Postman</a>
 <h1 align="center">
     <img alt="postman" title="postman" src="src/docs/assets/postman.png" width="800px" />
 </h1>
